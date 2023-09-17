@@ -12,27 +12,17 @@ body {
     margin: 0 auto;
 }
 .slider-box {
-    position: relative;
     height: 30%;
     width: 100%;
     margin: 5% auto 0;
     overflow-x: hidden;
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 60%;
-    height: auto;
-    transform: translate(-50%, -50%);
-    overflow-x: hidden;
-    overflow-y: visible; */
 }
-.slide-box {
+.slide-box{
     display: flex;
     width: 500%;
     height: 100%;
 }
 input {
-    position: absolute;
     visibility: hidden;
 }
 .controls label {
@@ -56,7 +46,21 @@ img {
 label:hover {
     background-color: #fff;
 }
-
+.slides_text {
+    color: #fff;
+    font-size: 2em;
+}
+.text1, .text2, .text3, .text4 {
+    display: none;
+}
+.fade_in {
+    animation-name: fade_in;
+    animation-duration: 2s;
+}
+@keyframes fade_in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
 .text_control-box {
     width: 100%;
     display: flex;
@@ -86,4 +90,16 @@ label:hover {
 }
 #slide_4:checked ~ .text_control-box > .controls >.label_4{
     background-color: white;
+}
+#slide_1:checked ~ .text_control-box > .slides_text > .text1 {
+    display: block;
+}
+#slide_2:checked ~ .text_control-box > .slides_text > .text2 {
+    display: block;
+}
+#slide_3:checked ~ .text_control-box > .slides_text > .text3 {
+    display: block;
+}
+#slide_4:checked ~ .text_control-box > .slides_text > .text4 {
+    display: block;
 }
