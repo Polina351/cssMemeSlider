@@ -26,12 +26,13 @@ input {
     visibility: hidden;
 }
 .controls label {
+    padding: 3hv;
     cursor: pointer;
     display: inline-block;
-    height: 10px;
-    width: 10px;
+    height: 2vh;
+    width: 2vh;
     border-radius: 50%;
-    background-color: aqua;
+    background-color: #c38bbf;
 }
 img {
     width: 100%;
@@ -44,18 +45,18 @@ img {
 }
 
 label:hover {
-    background-color: #fff;
+    background-color: #5d445b;
 }
 .slides_text {
-    color: #fff;
-    font-size: 2em;
+    color: #c38bbf;
 }
 .text1, .text2, .text3, .text4 {
     display: none;
+    font-size: 3vw;
 }
 .fade_in {
     animation-name: fade_in;
-    animation-duration: 2s;
+    animation-duration: 3s;
 }
 @keyframes fade_in {
     from {opacity: 0}
@@ -64,6 +65,7 @@ label:hover {
 .text_control-box {
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 #slide_1:checked ~ .slides_img > .slide-box > .tranlsate {
@@ -80,16 +82,20 @@ label:hover {
 }
 
 #slide_1:checked ~ .text_control-box > .controls >.label_1{
-    background-color: white;
+    background-color: #190c29;
+    border: solid #c38bbf;
 }
 #slide_2:checked ~ .text_control-box > .controls >.label_2{
-    background-color: white;
+    background-color: #190c29;
+    border: solid #c38bbf;
 }
 #slide_3:checked ~ .text_control-box > .controls >.label_3{
-    background-color: white;
+    background-color: #190c29;
+    border: solid #c38bbf;
 }
 #slide_4:checked ~ .text_control-box > .controls >.label_4{
-    background-color: white;
+    background-color: #190c29;
+    border: solid #c38bbf;
 }
 #slide_1:checked ~ .text_control-box > .slides_text > .text1 {
     display: block;
@@ -102,4 +108,28 @@ label:hover {
 }
 #slide_4:checked ~ .text_control-box > .slides_text > .text4 {
     display: block;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .text_control-box {
+        flex-direction: column-reverse;
+    }
+    .slides_text {
+        align-self: start;
+    }
+    .text_control-box {
+        width: 100%;
+    }
+    .text1, .text2, .text3, .text4 {
+        font-size: 5vw;
+    }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .text1, .text2, .text3, .text4 {
+        font-size: 7vw;
+    }
 }
