@@ -47,6 +47,9 @@ img {
 label:hover {
     background-color: #5d445b;
 }
+label:active {
+    background-color: #f658e9;
+}
 .slides_text {
     color: #c38bbf;
 }
