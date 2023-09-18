@@ -26,8 +26,14 @@ input {
     visibility: hidden;
 }
 .controls label {
-    padding: 3hv;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    padding: 1vh;
+    border-radius: 50%;
+}
+.label {
     display: inline-block;
     height: 2vh;
     width: 2vh;
@@ -44,10 +50,11 @@ img {
     transition: .4s ease;
 }
 
-label:hover {
+
+label:hover .label {
     background-color: #5d445b;
 }
-label:active {
+label:active .label{
     background-color: #f658e9;
 }
 .slides_text {
@@ -84,19 +91,19 @@ label:active {
     margin-left: -60%;
 }
 
-#slide_1:checked ~ .text_control-box > .controls >.label_1{
+#slide_1:checked ~ .text_control-box > .controls >.label_1 > .label{
     background-color: #190c29;
     border: solid #c38bbf;
 }
-#slide_2:checked ~ .text_control-box > .controls >.label_2{
+#slide_2:checked ~ .text_control-box > .controls >.label_2 > .label{
     background-color: #190c29;
     border: solid #c38bbf;
 }
-#slide_3:checked ~ .text_control-box > .controls >.label_3{
+#slide_3:checked ~ .text_control-box > .controls >.label_3 > .label{
     background-color: #190c29;
     border: solid #c38bbf;
 }
-#slide_4:checked ~ .text_control-box > .controls >.label_4{
+#slide_4:checked ~ .text_control-box > .controls >.label_4 > .label{
     background-color: #190c29;
     border: solid #c38bbf;
 }
