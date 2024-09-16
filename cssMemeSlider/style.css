@@ -6,6 +6,13 @@
 body {
     background: #190c29;
 }
+a {
+    font-size: 3vh;
+    text-decoration: none;
+}
+a:hover {
+    color: #5d445b;;
+}
 .container {
     height: auto;
     width: 65%;
